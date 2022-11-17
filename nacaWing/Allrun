@@ -9,7 +9,7 @@ decompDict="-decomposeParDict system/decomposeParDict.6"
 # unset decompDict
 
 # copy motorbike surface from resources directory
-mkdir -p constant/triSurface
+#mkdir -p constant/triSurface
 
 #NEPOTREBUJU UZ NAHRANO
 #cp -f \
