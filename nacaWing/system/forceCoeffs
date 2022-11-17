@@ -13,7 +13,7 @@ forceCoeffs1
     libs            (forces);
 
     writeControl    timeStep;
-    timeInterval    1;NACAWing.stl
+    timeInterval    1;nacaWing.stl
 
     log             yes;
 
