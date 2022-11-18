@@ -37,8 +37,8 @@ geometry
     refinementBox
     {
         type box;
-        min  (-1.0  0  -0.3);
-        max  ( 4  7 0.3);
+        min  (-1.0  0  -0.5);
+        max  ( 4  7 0.5);
     }
 }
 
@@ -217,7 +217,7 @@ addLayersControls
     // Per final patch (so not geometry!) the layer information
     layers
     {
-        "(lowerWall|nacaWing).*"
+        "(nacaWing).stl"
         {
             nSurfaceLayers 1;
         }
