@@ -22,11 +22,7 @@ boundaryField
 {
     #includeEtc "caseDicts/setConstraintTypes"
 
-    frontAndBack
-    {
-        type            calculated;
-        value           uniform 0;
-    }
+
 
     inlet
     {
@@ -40,13 +36,7 @@ boundaryField
         value           uniform 0;
     }
 
-    lowerWall
-    {
-        type            nutkWallFunction;
-        value           uniform 0;
-    }
-
-    upperWall
+    wall
     {
         type            calculated;
         value           uniform 0;

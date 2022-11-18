@@ -34,12 +34,6 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
-    {
-        type            kqRWallFunction;
-        value           $internalField;
-    }
-
     nacaWingGroup
     {
         type            kqRWallFunction;

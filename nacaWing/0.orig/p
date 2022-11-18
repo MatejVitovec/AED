@@ -35,11 +35,6 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
-    {
-        type            zeroGradient;
-    }
-
     nacaWingGroup
     {
         type            zeroGradient;

@@ -33,12 +33,6 @@ boundaryField
         value           $internalField;
     }
 
-    lowerWall
-    {
-        type            omegaWallFunction;
-        value           $internalField;
-    }
-
     nacaWingGroup
     {
         type            omegaWallFunction;
