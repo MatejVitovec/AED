@@ -13,7 +13,7 @@ forceCoeffs1
     libs            (forces);
 
     writeControl    timeStep;
-    timeInterval    1;nacaWing.stl
+    timeInterval    1;
 
     log             yes;
 
@@ -22,11 +22,12 @@ forceCoeffs1
     rhoInf          1;           // Required when rho = rhoInf
     liftDir         (0 0 1);
     dragDir         (1 0 0);
-    CofR            (0.72 0 0);  // Axle midpoint on ground
+    CofR            (0 0 0);  // Axle midpoint on ground
     pitchAxis       (0 1 0);
     magUInf         20;
     lRef            0.95;        // Wheelbase length
     Aref            1;        // Estimated
+    origin          (0 0 0);
     /*
     binData
     {

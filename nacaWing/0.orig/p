@@ -40,6 +40,11 @@ boundaryField
         type            zeroGradient;
     }
 
+    symmetryWall
+    {
+        type            symmetryPlane;
+    }
+
     #include "include/frontBackUpperPatches"
 }
 

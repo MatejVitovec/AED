@@ -18,7 +18,26 @@ FoamFile
 #includeEtc "caseDicts/meshQualityDict"
 
 //- minFaceWeight (0 -> 0.5)
-minFaceWeight 0.02;
+//minFaceWeight 0.02;
+
+    maxNonOrtho 55;
+    maxBoundarySkewness 2;
+    maxInternalSkewness 2;
+    maxConcave 80;
+    minVol 1e-13;
+    minTetQuality -1e30;
+    minArea -1;
+    minTwist 0.02;
+    minDeterminant 0.001;
+    minFaceWeight 0.05;
+    minVolRatio 0.01;
+    minTriangleTwist -1;
+    nSmoothScale 4;
+    errorReduction 0.75;
+    relaxed
+    {
+        maxNonOrtho 55;
+    }
 
 
 // ************************************************************************* //

@@ -27,6 +27,13 @@ boundaryField
     //- Define inlet conditions
     #include "include/fixedInlet"
 
+    inlet
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
     outlet
     {
         type            inletOutlet;
@@ -38,6 +45,11 @@ boundaryField
     {
         type            kqRWallFunction;
         value           $internalField;
+    }
+
+    symmetryWall
+    {
+        type            symmetryPlane;
     }
 
     #include "include/frontBackUpperPatches"

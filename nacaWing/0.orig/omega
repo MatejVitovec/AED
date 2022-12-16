@@ -33,10 +33,22 @@ boundaryField
         value           $internalField;
     }
 
+    inlet
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
     nacaWingGroup
     {
         type            omegaWallFunction;
         value           $internalField;
+    }
+
+    symmetryWall
+    {
+        type            symmetryPlane;
     }
 
     #include "include/frontBackUpperPatches"

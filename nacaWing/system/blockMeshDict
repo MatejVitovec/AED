@@ -40,9 +40,9 @@ edges
 
 boundary
 (
-    symetryWall
+    symmetryWall
     {
-        type patch;
+        type symmetryPlane;
         faces
         (
             (1 5 4 0)
@@ -68,7 +68,7 @@ boundary
     }
     wall
     {
-        type wall;
+        type patch;
         faces
         (
             (3 7 6 2)
