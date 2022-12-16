@@ -7,8 +7,6 @@ runApplication surfaceFeatureExtract
 
 runApplication blockMesh
 
-runApplication $decompDict decomposePar
-
 # Using distributedTriSurfaceMesh?
 if foamDictionary -entry geometry -value system/snappyHexMeshDict | \
    grep -q distributedTriSurfaceMesh
@@ -18,15 +16,16 @@ then
 fi
 
 #runParallel $decompDict
-snappyHexMesh -overwrite
+runApplication snappyHexMesh -overwrite
+
+restore0Dir
+
+runApplication $decompDict decomposePar
+
+#runParallel simpleFoam
+#mpirun -np 6 --oversubscribe simpleFoam -parallel
 
 #runParallel $decompDict topoSet
-
-#- For non-parallel running: - set the initial fields
-# restore0Dir
-
-#- For parallel running: set the initial fields
-#restore0Dir -processor
 
 #runParallel $decompDict patchSummary
 

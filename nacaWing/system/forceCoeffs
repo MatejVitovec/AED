@@ -20,6 +20,7 @@ forceCoeffs1
     patches         (nacaWingGroup);
     rho             rhoInf;      // Indicates incompressible
     rhoInf          1;           // Required when rho = rhoInf
+    porosity        no;
     liftDir         (0 0 1);
     dragDir         (1 0 0);
     CofR            (0 0 0);  // Axle midpoint on ground
