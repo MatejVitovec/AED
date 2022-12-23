@@ -1,8 +1,6 @@
 
 . ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions
 
-decompDict="-decomposeParDict system/decomposeParDict.6"
-
 runApplication surfaceFeatureExtract
 
 runApplication blockMesh
@@ -20,10 +18,16 @@ runApplication snappyHexMesh -overwrite
 
 restore0Dir
 
+decompDict="-decomposeParDict system/decomposeParDict.6"
+
 runApplication $decompDict decomposePar
 
 #runParallel simpleFoam
-#mpirun -np 6 --oversubscribe simpleFoam -parallel
+mpirun -np 6 --oversubscribe simpleFoam -parallel
+
+runApplication reconstructPar -latestTime
+
+#------------------------------------------------------------------------------
 
 #runParallel $decompDict topoSet
 
