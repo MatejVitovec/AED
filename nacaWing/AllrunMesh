@@ -13,7 +13,6 @@ then
     echo " - distributedTriSurfaceMesh will do on-the-fly redistribution"
 fi
 
-#runParallel $decompDict
 runApplication snappyHexMesh -overwrite
 
 restore0Dir
